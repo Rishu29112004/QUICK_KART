@@ -10,9 +10,25 @@ import orderRouter from "./routes/orderRouter.js";
 dotenv.config();
 
 const app = express();
+
+const allowedOrigins = [
+  process.env.FRONTEND_URL,
+  "https://quick-kart-ecommerce.vercel.app",
+  "https://quick-kart-ecommerce-cip778e7d-kumar-rishu-ritiks-projects.vercel.app",
+  /^https:\/\/.*\.vercel\.app$/
+];
+
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL,
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.some(allowed => 
+        allowed instanceof RegExp ? allowed.test(origin) : allowed === origin
+      )) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
   }),
 );
