@@ -14,7 +14,7 @@ const Profile = () => {
         const response = await profileServices.getMyProfile(user?._id);
         setUserProfileData(response?.data);
       } catch (err) {
-        console.log(err);
+        // Error handled silently
       }
     };
 
@@ -25,7 +25,6 @@ const Profile = () => {
   const handleUpdateProfile = async (data) => {
     try {
       const response = await profileServices.updateProfile(user?._id, data);
-      console.log("check for the response what it is here ",response)
       setUserProfileData(response?.data);
     } catch (err) {
       throw err;

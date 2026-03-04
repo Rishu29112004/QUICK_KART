@@ -69,7 +69,6 @@ const Home = () => {
   const { user } = useAuth();
   const [loading, setLoading] = useState(false);
 
-  console.log(allProducts);
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -100,7 +99,6 @@ const Home = () => {
 
       setAllProducts(Array.isArray(products) ? products : []);
     } catch (error) {
-      console.log(error);
       toast.error("Failed to fetch products");
       setAllProducts([]);
     } finally {

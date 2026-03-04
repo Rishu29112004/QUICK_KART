@@ -62,8 +62,6 @@ export const productService = {
   // updateProduct
   updateProduct: async (id, data) => {
     try {
-        console.log(typeof data.price, data.price);
-      console.log(typeof data.offerPrice, data.offerPrice);
       const formData = new FormData();
 
       Object.entries(data).forEach(([key, value]) => {

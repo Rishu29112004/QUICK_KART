@@ -28,7 +28,7 @@ const ContactUs = () => {
         setMessage("");
       })
       .catch((error) => {
-        console.log(error);
+        console.error("Failed to send message:", error);
         alert("Failed ❌");
       });
   };

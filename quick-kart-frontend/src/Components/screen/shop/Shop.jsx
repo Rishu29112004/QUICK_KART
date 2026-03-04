@@ -20,13 +20,10 @@ const Shop = () => {
       setLoading(true);
       const response = await productService.getAllProducts();
 
-      console.log("FULL API RESPONSE:", response);
-
       const products = response?.data || [];
 
       setAllProducts(Array.isArray(products) ? products : []);
     } catch (error) {
-      console.log(error);
       toast.error("Failed to fetch products");
       setAllProducts([]);
     } finally {

@@ -33,8 +33,6 @@ app.use(
   }),
 );
 
-console.log("hehe",process.env.FRONTEND_URL)
-
 app.use(express.json())
 
 app.use("/api/auth",authRouter)

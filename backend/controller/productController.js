@@ -32,7 +32,6 @@ export const addProduct = async (req, res) => {
 
     return response(res, 201, "Product added successfully", newProduct);
   } catch (error) {
-    console.log("Add product error:", { error });
     return response(res, 500, "Failed to add product", {
       error: error.message,
     });

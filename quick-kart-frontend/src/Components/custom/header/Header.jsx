@@ -14,7 +14,6 @@ import LoginForm from "./components/LoginForm";
 import { CartContext } from "../../context/CartContext";
 import { useAuth } from "../../context/authContext";
 import { NavLink } from "react-router-dom";
-import Orders from "../SellerDashboard/Orders";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -44,7 +43,6 @@ const Header = () => {
     };
   }, [profileOpen]);
 
-  console.log("user data aa ra", user);
   const handleLogin = () => {
     setSignup(false);
     setOpenLogin(true);

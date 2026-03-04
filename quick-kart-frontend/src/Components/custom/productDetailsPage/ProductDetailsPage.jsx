@@ -25,7 +25,7 @@ const ProductDetailsPage = () => {
 
       setProduct(data);
     } catch (error) {
-      console.log(error);
+      console.error("Failed to fetch product:", error);
       toast.error("Failed to fetch product");
     } finally {
       setLoading(false);

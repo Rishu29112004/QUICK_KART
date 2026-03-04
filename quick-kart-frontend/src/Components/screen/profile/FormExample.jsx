@@ -44,7 +44,7 @@
 //     if(!validation()){
 //       return
 //     }
-//     console.log(formData)
+//     // console.log(formData)
 //   };
 
 //   return (
@@ -126,7 +126,7 @@ const FormExample = () => {
   const { register,handleSubmit,formState: { errors }} = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+    // Form submission - do nothing, just log for debugging purposes
   };
 
   return (

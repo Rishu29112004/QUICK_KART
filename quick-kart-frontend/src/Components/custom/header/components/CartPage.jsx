@@ -10,8 +10,6 @@ const CartPage = () => {
     useContext(CartContext);
 
   const { user } = useAuth();
-  console.log(cartItem);
-  console.log(user);
   return (
     <div className="min-h-screen py-8 px-4 max-w-7xl mx-auto">
       <h2 className="text-2xl font-bold mb-6">Your Cart</h2>

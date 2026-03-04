@@ -22,7 +22,7 @@ export const CartProvider = ({ children }) => {
       setCartItem(response?.cart?.products || []);
 
     } catch (error) {
-      console.log("Cart fetch error", error);
+      console.error("Cart fetch error", error);
     } finally {
       setLoading(false);
     }
@@ -65,7 +65,7 @@ export const CartProvider = ({ children }) => {
       await fetchCart();
 
     } catch (error) {
-      console.log("Add to cart error", error);
+      console.error("Add to cart error", error);
     } finally {
       setUpdating(false);
     }
@@ -85,7 +85,7 @@ export const CartProvider = ({ children }) => {
       await fetchCart();
 
     } catch (error) {
-      console.log("Remove cart error", error);
+      console.error("Remove cart error", error);
     } finally {
       setUpdating(false);
     }
@@ -108,7 +108,7 @@ export const CartProvider = ({ children }) => {
       await fetchCart();
 
     } catch (error) {
-      console.log(error);
+      console.error( error);
     } finally {
       setUpdating(false);
     }
@@ -132,7 +132,7 @@ export const CartProvider = ({ children }) => {
       await fetchCart();
 
     } catch (error) {
-      console.log(error);
+      console.error( error);
     } finally {
       setUpdating(false);
     }

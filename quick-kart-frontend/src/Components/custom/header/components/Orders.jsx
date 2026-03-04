@@ -22,7 +22,7 @@ const Orders = () => {
       setOrders(res.orders || []);
       setCurrentPage(1);
     } catch (error) {
-      console.log(error);
+      console.error("Failed to fetch orders:", error);
       setError("Failed to load orders. Please try again later.");
       setOrders([]);
     } finally {

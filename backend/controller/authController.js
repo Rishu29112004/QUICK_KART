@@ -127,7 +127,6 @@ export const logout = async (req, res) => {
 export const checkAuth = async (req, res) => {
   try {
     const userId = req?.id;
-    console.log("am i getting the user id at here ", userId);
     if (!userId) {
       return response(
         res,
